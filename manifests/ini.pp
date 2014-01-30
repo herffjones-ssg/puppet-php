@@ -12,7 +12,6 @@
 #  }
 #
 define php::ini (
-  $template                   = 'php/php.ini-el6.erb',
   # php.ini options in the order they appear in the original file
   $user_ini_filename          = '.user.ini',
   $user_ini_cache_ttl         = '300',
@@ -68,7 +67,6 @@ define php::ini (
   $user_dir                   = '',
   $enable_dl                  = 'Off',
   $file_uploads               = 'On',
-  $upload_tmp_dir             = undef,
   $upload_max_filesize        = '2M',
   $allow_url_fopen            = 'On',
   $allow_url_include          = 'Off',
@@ -98,14 +96,11 @@ define php::ini (
   $session_referer_check      = '',
   $session_hash_function      = '0',
   $session_hash_bits_per_character = '5',
-  $url_rewriter_tags          = 'a=href,area=href,frame=src,input=src,form=fakeentry',
-  $soap_wsdl_cache_enabled    = '1',
-  $soap_wsdl_cache_dir        = '/tmp',
-  $soap_wsdl_cache_ttl        = '86400'
+  $url_rewriter_tags          = 'a=href,area=href,frame=src,input=src,form=fakeentry'
 ) {
   include php::common
   file { $title:
-    content => template($template),
+    content => template('php/php.ini-el6.erb'),
   }
 }
 

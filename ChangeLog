@@ -1,13 +1,3 @@
-2013-10-01 - 0.3.7
-* Manage the incorrectly named php-apc package under Debian (Jeroen Moors).
-
-2013-09-30 - 0.3.6
-* Enable using a custom template for php.ini (Nick Schuch).
-
-2013-09-05 - 0.3.5
-* Add upload_tmp_dir php.ini option support (Andy Shinn).
-* Add soap related php.ini options support (Flavien Binet).
-
 2013-08-30 - 0.3.3
 * Use @varname syntax in fpm templates too.
 * Fix php::module::ini when ensure is absent.
